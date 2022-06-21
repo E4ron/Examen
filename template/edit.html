@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Редактирование постов</title>
+</head>
+<body>
+<div class="container">
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Всё услуги</a></li>
+        </ul>
+    </header>
+<form method="POST">
+    <h1 class="cover-heading">Форма изменения услуги</h1>
+    <input type="hidden" class="form-control" name="id" value="{{.Id}}" />
+    <p>Название услуги</p>
+    <input type="text" name="name" class="form-control" value="{{.Name}}" /><br>
+    <p>Описание услуги</p>
+    <input type="text" name="text" value="{{.Text}}" class="form-control" /><br>
+    <p>Цена</p>
+    <input type="prise" name="prise" value="{{.Prise}}" class="form-control">
+    <input type="submit" class="btn btn-warning" value="Редактировать" />
+</form>
+</div>
+</body>
+</html>
